@@ -1,0 +1,37 @@
+name: Deploy to Firebase Hosting
+
+    on:
+      push:
+        branches:
+          - main # Ganti dengan nama branch utama Anda jika bukan 'main'
+
+    jobs:
+      build_and_deploy:
+        runs-on: ubuntu-latest # Lingkungan build di GitHub Actions
+
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v4 # Mengambil kode dari repositori
+
+          - name: Setup Node.js
+            uses: actions/setup-node@v4
+            with:
+              node-version: '20' # Gunakan versi Node.js yang kompatibel (misal: 18, 20, 22)
+
+          - name: Install dependencies
+            run: npm install # Menginstal semua dependensi proyek
+
+          - name: Build application
+            run: npm run build # Menjalankan proses build React (membuat folder 'build')
+            env:
+              NODE_OPTIONS: --max_old_space_size=8192 # Alokasi memori untuk build di cloud
+
+          - name: Deploy to Firebase
+            uses: FirebaseExtended/action-hosting-deploy@v0
+            with:
+              repoToken: '${{ secrets.GITHUB_TOKEN }}' # Token GitHub untuk akses repo
+              firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ASTIN_27EE3 }}' # Token Firebase dari GitHub Secrets
+              projectId: astin-27ee3 # ID Proyek Firebase Anda
+              channelId: live # Deploy ke channel 'live' (default)
+              target: astin-27ee3 # Target hosting Anda (opsional, jika Anda punya banyak situs)
+    
