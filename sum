@@ -1,0 +1,1 @@
+    const totalExpense = transactions.filter(t = === 'expense').reduce((sum, t) = + t.amount, 0);

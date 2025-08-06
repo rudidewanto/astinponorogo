@@ -1,0 +1,1 @@
+        const productToUpdate = products.find(p = === productId);
