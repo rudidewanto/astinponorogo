@@ -2,16 +2,16 @@
   "name": "astinponorogo",
   "version": "1.0.0",
   "private": true,
-  "description": "Aplikasi Manajemen Astin Ponorogo",
-  "main": "src/index.js",
+  "description": "Aplikasi Manajemen Produk, Stok, dan Keuangan untuk Astin Ponorogo",
+  "homepage": "https://astin-27ee3.web.app",
   "dependencies": {
     "firebase": "^12.0.0",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "recharts": "^2.12.7"
   },
   "devDependencies": {
-    "react-scripts": "^5.0.1",
-    "recharts": "^3.1.2"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,25 +26,5 @@
     "astinponorogo"
   ],
   "author": "DewaDigital",
-  "license": "ISC",
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rudidewanto/astinponorogo.git"
-  },
-  "bugs": {
-    "url": "https://github.com/rudidewanto/astinponorogo/issues"
-  },
-  "homepage": "https://github.com/rudidewanto/astinponorogo#readme"
+  "license": "ISC"
 }
