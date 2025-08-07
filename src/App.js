@@ -230,11 +230,11 @@ function App({ firebaseConfig: propFirebaseConfig, appId: propAppId }) { // Mene
                         <div className="md:hidden">
                             <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-white">
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    {/* Perbaikan di sini: Pastikan ekspresi d={} tidak memiliki colon di luar string */}
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
                                 </svg>
                             </button>
                         </div>
-
                         {/* Navigasi Desktop */}
                         <nav className="hidden md:block">
                             <ul className="flex space-x-4">
