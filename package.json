@@ -2,7 +2,7 @@
   "name": "astinponorogo",
   "version": "1.0.0",
   "private": true,
-  "description": "Aplikasi Manajemen Produk, Stok, dan Keuangan untuk Astin Ponorogo",
+  echo "description": "Aplikasi Manajemen Produk, Stok, dan Keuangan untuk Astin Ponorogo",
   "homepage": "https://astin-27ee3.web.app",
   "dependencies": {
     "firebase": "^12.0.0",
